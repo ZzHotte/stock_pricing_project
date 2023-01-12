@@ -40,6 +40,31 @@ struct farmer {
 ```
 Then the 
 
+-------------------------------------------------------------------------------------->
+## The Source Files
+All required files are included in the archive with the following structure:/n
+project2/ /n
+| /n
+|__ __init__.py
+|__ config.py
+|__ project_desc.pdf
+|__ zid_project2.py
+|
+|___data/
+| | <many csv files here>
+where
+• project2/ represents the main folder containing all the project files.
+• zid_project2.py contains the functions you need to write for this project. This is the only file you
+need to submit.
+• project_desc.pdf is the PDF version of this document.
+• data/: This is the sub-directory where all the data files for this files are stored. Inside this folder you
+will find many files. Each <tic>_prc.csv contains stock price data for the ticker <tic>. These CSV
+files include the column names in a header row of text. In addition, this folder contains a file called
+ff_daily.csv, which includes market returns.
+• config.py is the configuration module for this package. You do not need to modify this file.
+
+
+
 <!--这一部分介绍项目里用到的文件 和文件里用到的函数
 -------------------------------------------------------------------------------------->
 ## 03 Functions
