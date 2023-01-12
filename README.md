@@ -413,8 +413,8 @@ Given a series with daily returns, this function will return the annualised retu
 <!--如何使用这份文件
 -------------------------------------------------------------------------------------->
 ## 04 User Guide
-There project.py can be omported as a module to call the functions in the main script. 
-Users can input the name of the stock and the time period they are interested in. The script will produce a dataframe containing cumulative annual returns and abnormal returns.
+There project.py can be imported as a module to call the functions in the main script. 
+Users can input the name of the stock and the time period they are interested in. The script will produce a dataframe containing cumulative annual returns and abnormal returns regarding certain stocks.
     
 <!--源文件结构
 -------------------------------------------------------------------------------------->
