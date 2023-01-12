@@ -425,7 +425,7 @@ All required files are included in the archive with the following structure:
     |___data/
     |__ __init__.py
     |__ config.py
-    |__ zid_project2.py
+    |__ pricing_project.py
     |__ test.py
     |
     | | <many csv files here>
@@ -438,5 +438,5 @@ where
   files include the column names in a header row of text. In addition, this folder contains a file called
   ff_daily.csv, which includes market returns.
 * config.py is the configuration module for this package. You do not need to modify this file.
-* zid_project2.py contains the functions you need to write for this project. 
+* pricing_project.py contains the functions you need to write for this project. 
 * test.py can be used as a mina script.
