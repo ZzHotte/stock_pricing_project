@@ -23,12 +23,12 @@ This function creates a data frame with the contents of a CSV file containing st
 
 ```
     Parameters
-    ----------
+    --------------------
         tic : str
             String with the ticker
 
     Returns
-    -------
+    --------------------
         df 
         A Pandas data frame containing the stock price information from the CSV
         containing the stock prices for the ticker `tic`.
@@ -44,8 +44,8 @@ This function creates a data frame with the contents of a CSV file containing st
           `project2.config.py` module.
     
     Examples
-    --------
-    Input stock name and run in the terminal:
+    --------------------
+    Input stock ticker and call the function in the console:
         >> tic = 'AAPL'
         >> tic_df = read_prc_csv(tic)
         >> tic_df.info()
@@ -67,11 +67,11 @@ This function creates a data frame with the contents of a CSV file containing st
 
 ### 02 mk_prc_df function
 This function creates a data frame containing price information for a list of tickers and a given type of quote (e.g., open, close, ...).
-This function uses the `read_prc_csv` function in this module to read the price information for each ticker in `tickers`.
+It uses the `read_prc_csv` function in this module to read the price information for each ticker in `tickers`.
 
 ```
     Parameters
-    ----------
+    --------------------
     tickers : list
         List of tickers
 
@@ -82,7 +82,7 @@ This function uses the `read_prc_csv` function in this module to read the price 
         Defaults to 'adj_close'.
 
     Returns
-    -------
+    --------------------
     df
         A Pandas data frame containing the `prc_col` price for each stock
         in the `tickers` list:
@@ -97,13 +97,13 @@ This function uses the `read_prc_csv` function in this module to read the price 
           the number of tickers in the ``tickers` parameter. 
 
     Notes
-    -----
+    --------------------
     - If the price is not available for a given ticker and date, its value
       will be a NaN, as long as there is a price available for another ticker
       on the same date.
 
     Examples
-    --------
+    --------------------
     Example 1: Suppose there are two tickers in `tickers`, "tic1" and "tic2".
     Suppose the following information is available for each ticker: 
 
@@ -130,7 +130,7 @@ This function uses the `read_prc_csv` function in this module to read the price 
     no price information (for any ticker in `tickers`) on that date.
 
     Example 2:    
-
+    Call the functon in the console:
         >> tickers = ['AAPL', 'TSLA']
         >> prc_df = mk_prc_df(tickers, prc_col='adj_close')
         >> prc_df.info()
@@ -157,12 +157,10 @@ This function uses the `read_prc_csv` function in this module to read the price 
 
     
 ### 03 mk_ret_df function
-Creates a data frame containing returns for both individuals stock AND 
-a proxy for the market portfolio, given a data frame with stock prices, `prc_df`. 
-
+Creates a data frame containing returns for both individuals stock and a proxy for the market portfolio, given a data frame with stock prices, `prc_df`. 
 This function will compute returns for each column of `prc_df` and also include the market returns in a column called "mkt".  
 
-Market returns need to be obtained from the "mkt" column in the CSV file "ff_daily_csv". The location of this CSV file is given by the variable `FF_CSV`, defined in the project2.config.py module.
+Market returns are obtained from the "mkt" column in the CSV file "ff_daily_csv". The location of this CSV file is given by the variable `FF_CSV`, defined in the project2.config.py module.
             
 ```            
     Parameters
@@ -189,7 +187,7 @@ Market returns need to be obtained from the "mkt" column in the CSV file "ff_dai
     --------
     Note: The examples below are for illustration purposes. Your ticker/sample
     period may be different. 
-
+    Call the function:
         >> tickers = ['AAPL', 'TSLA']
         >> prc_df = mk_prc_df(tickers, prc_col='adj_close')
         >> ret_df = mk_ret_df(prc_df)
@@ -249,7 +247,7 @@ Creates a data frame with abnormal returns for each stock in `ret_df`, where abn
     --------
     Note: The examples below are for illustration purposes. Your ticker/sample
     period may be different.
-
+    Call the function:
         >> tickers = ['AAPL', 'TSLA']
         >> prc_df = mk_prc_df(tickers, prc_col='adj_close')
         >> ret_df = mk_ret_df(prc_df)
@@ -369,10 +367,9 @@ Returns a series with the returns on an equally-weighted portfolio of stocks (ig
 
 ### 07 get_ann_ret function
 Returns the annualised returns for a given period.
-
-```
 Given a series with daily returns, this function will return the annualised return for the period from `start` to `end` (including `end`).
 
+```
     Parameters
     ----------
     ser : series
